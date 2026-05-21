@@ -1,32 +1,185 @@
-# ♻️ Waste-to-Wonder: AI DIY Craft Generator
+# ♻️ DIY Waste Craft Generator
 
-## 📌 Overview
-This project is an intelligent system that helps users upcycle useless waste materials into creative DIY projects. It combines traditional Machine Learning for text classification with Generative AI (Gemini 2.5 Flash) to provide complete, step-by-step crafting tutorials. 
+An AI-powered web application that transforms waste materials into creative DIY craft ideas using image understanding and generative AI. Users upload an image of waste items, and the system analyzes the object and generates innovative reuse suggestions with guided instructions.
 
-## ✨ Features
-* **Smart Categorization:** Uses a custom-trained ML model (saved via `joblib`) to analyze user-inputted waste items and predict the most suitable product category (e.g., Home Decor, Storage).
-* **AI Generative Tutorials:** Automatically passes the predicted category and waste items to the Gemini API to generate a catchy product name, an exact list of required materials, and step-by-step building instructions.
-* **Simple CLI Interface:** Easy-to-use command-line interface that takes simple text input and outputs a clean, readable tutorial.
+This project encourages sustainable practices by helping users convert everyday waste into useful and creative products.
 
-## 🛠️ Tech Stack
-* **Language:** Python
-* **Machine Learning:** Scikit-Learn (Model, Vectorizer, Label Encoder)
-* **Generative AI:** Google Gemini API (`gemini-2.5-flash`)
-* **Libraries:** `joblib`, `google-generativeai`
+---
 
-## 🚀 How It Works
-1. The user runs `predict.py` and enters a waste item (e.g., "old plastic bottles and cardboard").
-2. The ML model (`model.pkl`) predicts the best DIY product type.
-3. The `gemini_helper.py` script sends the waste item and product type to the Gemini API.
-4. Gemini returns a fully formatted, creative DIY guide with a difficulty rating and instructions.
+## 📌 Problem Statement
 
-## 💻 Setup and Installation
+Large amounts of household waste such as plastic bottles, cardboard, jars, newspapers, and containers are discarded daily despite having potential for reuse. People often lack ideas on how these materials can be repurposed.
 
-**1. Clone the repository:**
+DIY Waste Craft Generator solves this problem by using AI to suggest creative craft ideas from waste materials.
+
+---
+
+## 🚀 Features
+
+- Upload image of waste material
+- AI-based image understanding
+- Generates DIY craft suggestions
+- Provides step-by-step guidance
+- User-friendly interface
+- Promotes recycling and sustainability
+- Real-time generation of ideas
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Python
+- Flask
+
+### AI Components
+- OpenAI API / Generative AI
+- Prompt Engineering
+- Image Processing
+
+---
+## 📊 Custom Dataset Creation
+
+A custom dataset was created specifically for this project instead of relying entirely on publicly available datasets.
+
+The dataset includes various waste materials collected and organized manually, such as:
+
+- Plastic bottles
+- Cardboard items
+- Glass jars
+- Newspapers
+- Tin cans
+- Household recyclable waste
+
+The collected data was cleaned, categorized, and prepared for AI processing to improve the relevance and quality of generated DIY craft suggestions.
+
+This approach helped create a more domain-specific dataset tailored for waste-to-craft idea generation.
+
+## ⚙️ Working Procedure
+
+The system follows the workflow below:
+
+1. User uploads an image of a waste item  
+2. Image is processed by the system  
+3. AI identifies or understands the object  
+4. Prompt is generated dynamically  
+5. Generative AI creates suitable DIY ideas  
+6. Results are displayed with instructions  
+
+---
+
+## 📂 Project Structure
+
 ```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+DIY-Waste-Craft-Generator/
+│
+├── static/               # CSS, JavaScript, assets
+├── templates/            # HTML pages
+├── uploads/              # User uploaded images
+├── app.py                # Main Flask application
+├── requirements.txt      # Required libraries
+├── utils/                # Helper functions
+└── README.md
+```
 
-2. Install dependencies:
-Make sure you have the required Python libraries installed:
-pip install scikit-learn joblib google-generativeai
+---
+
+## 💻 Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/adityasingh353/DIY-Waste-Craft-Generator.git
+```
+
+Move into project directory:
+
+```bash
+cd DIY-Waste-Craft-Generator
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run application:
+
+```bash
+python app.py
+```
+
+Open browser:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+## 🌱 Sample Inputs
+
+- Plastic Bottle
+- Cardboard Box
+- Old Newspaper
+- Glass Jar
+- Tin Can
+
+### Example Outputs
+
+- Pen Stand
+- Decorative Lamp
+- Flower Vase
+- Storage Organizer
+- Wall Decoration
+
+---
+
+## 🔮 Future Enhancements
+
+- Multi-language support
+- Video tutorial generation
+- Voice-based interaction
+- Mobile application deployment
+- Craft difficulty recommendations
+
+---
+
+## 📸 Screenshots
+
+
+
+### Home Page
+![Home Page](screenshot\image.png)
+
+
+### Generated Results
+
+Part 1  
+![Result Page Part 1](screenshot\Screenshot_21-5-2026_123211_localhost.jpeg)
+
+Part 2  
+![Result Page Part 2](screenshot\Screenshot_21-5-2026_123230_localhost.jpeg)
+
+Part 3  
+![Result Page Part 3](screenshot\Screenshot_21-5-2026_123241_localhost.jpeg
+
+---
+
+## 👨‍💻 Created By
+
+Aditya Singh  
+
+## 📜 License
+
+This project is developed for educational and learning purposes.
+
+---
+
+⭐ If you found this project useful, consider starring the repository.

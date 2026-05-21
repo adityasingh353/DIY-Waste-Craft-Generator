@@ -1,8 +1,12 @@
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
-API_KEY = "Your_gemini_api_key_here"  
+load_dotenv()   # <-- ye missing tha
 
-genai.configure(api_key="Your_gemini_api_key_here")
+API_KEY = os.getenv("GOOGLE_API_KEY")
+
+genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
