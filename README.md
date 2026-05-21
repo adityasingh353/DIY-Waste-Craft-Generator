@@ -156,7 +156,7 @@ http://localhost:5000
 
 
 ### Home Page
-![Home Page](screenshot\image.png)
+![Home Page](screenshot/image.png)
 
 
 ### Generated Results
