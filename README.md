@@ -161,14 +161,12 @@ http://localhost:5000
 
 ### Generated Results
 
-Part 1  
-![Result Page Part 1](screenshot\Screenshot_21-5-2026_123211_localhost.jpeg)
 
-Part 2  
-![Result Page Part 2](screenshot\Screenshot_21-5-2026_123230_localhost.jpeg)
+![Result Page Part 1](screenshot/Screenshot_21-5-2026_123211_localhost.jpeg)
 
-Part 3  
-![Result Page Part 3](screenshot\Screenshot_21-5-2026_123241_localhost.jpeg
+![Result Page Part 2](screenshot/Screenshot_21-5-2026_123230_localhost.jpeg)
+ 
+![Result Page Part 3](screenshot/Screenshot_21-5-2026_123241_localhost.jpeg)
 
 ---
 
